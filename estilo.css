@@ -1,0 +1,410 @@
+*{ /*Reseteo o normalizacion de margenes y paddings predeterminados*/
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Oxygen", sans-serif;
+}
+:root{
+    --color1:#334960;
+    --color2:#F2F2F2;
+    --color3:#44A1F2;
+    --color4:#99A4B0;   
+}
+#contenedor{
+    width: 100%;
+    min-height: 100vh;  
+}
+header{     
+    background-color: var(--color1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding:20px;
+    /*posicionamiento fijo*/
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:100;  
+}
+header a img{
+    height: 60px;   
+}
+nav{
+    padding-right: 40px;
+    font-size: 0.8em;
+}
+#menu,#redes{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;        
+}
+#menu li a, #redes li a{
+    text-decoration: none;
+    padding:10px;
+    color:var(--color4)
+}
+#menu li a:hover,#redes li a:hover{
+    color:var(--color2);
+}
+h5{
+    color:var(--color1);
+    margin-top: 115px;    
+    margin-left:15px;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border:1px solid grey;
+    margin-bottom:10px          
+}
+section{
+    width:65%;    
+    text-align: center;      
+}
+section article{
+    width:90%;    
+    margin:5px auto;
+}
+section article img{
+    max-width: 90%;
+}
+section article p{
+    max-width: 90%;    
+    margin: auto;
+    padding: 5px;
+    font-size: 0.8em;
+    font-style: italic;     
+}
+section article h2{
+    /*posicionamiento adhesivo*/
+    position:sticky;
+    top:100px;
+    background-color: var(--color2);
+    z-index: 20;
+    padding: 1px 5px;    
+}
+aside{
+    width: 30%;
+    text-align: center;    
+}
+aside img{
+    max-width: 70% ;
+    margin-bottom: 10px;
+}
+footer{  
+    background-color: var(--color1);
+    color:var(--color2);    
+    font-size: 0.8rem;  
+}
+footer h4{
+    padding:10px 5px;
+    text-align: center;   
+}
+footer div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;    
+    margin:2px;
+}
+address ul{    
+    padding:2px 15px;
+}
+nav p{
+    text-align: center;
+}
+/*Videos responsivos*/
+/*video.html y destino.html*/
+.video-responsive{ /*contenedor del video*/
+    position: relative;/* Muy importante para posicionar el iframe o etiqueta video */
+    height: 0;/* Se establece en 0 para que la altura sea determinada por el padding */
+    padding-bottom: 56.25%;/* Esto crea el espacio vertical 16:9 */
+    border:1px solid var(--color3);    
+}
+.video{
+    position: absolute;/* El iframe se posiciona de forma absoluta dentro del contenedor */
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%; /* El iframe o etiqueta video ocupa todo el espacio definido por el padding */
+}
+/*Video de fondo*/
+#video_fondo{
+    /* min-width: 100%;
+    min-height: 100%;
+    width:auto;
+    height: auto; */
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    opacity: 0.9;    
+}
+/*texto de fondo*/
+#contenido{
+    /*main ya tiene flex box centrado*/
+   width:100%;      
+   z-index: 10;   
+}
+.blanco{color:var(--color2)}
+main #texto{
+    width:80%;    
+    padding:10px;  
+    z-index: 50;
+    color:var(--color2);
+    text-align:justify;
+}
+.fijo{
+    position: fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    z-index:100;  
+}
+
+/* ========== ESTILOS PARA PÁGINA DE CONTACTOS ========== */
+.contactos-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px 15px;
+    border: none;
+    min-height: 500px;
+}
+
+.info-contacto,
+.formulario-contacto,
+.mapa-contacto {
+    flex: 1 1 280px;
+    min-width: 260px;
+    max-width: 100%;
+}
+
+/* Títulos en rojo como en el diseño */
+.titulo-rojo {
+    color: #c0392b;
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+/* Tabla de información de contacto */
+.tabla-contacto {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border: 2px dashed #44A1F2;
+    background-color: #fafafa;
+}
+
+.tabla-contacto caption {
+    caption-side: top;
+    font-size: 0.75rem;
+    color: #666;
+    padding: 4px;
+    text-align: left;
+}
+
+.tabla-contacto th,
+.tabla-contacto td {
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 0.9rem;
+}
+
+.tabla-contacto th {
+    width: 30%;
+    color: var(--color1);
+    font-weight: 700;
+    background-color: #f0f4f8;
+}
+
+.tabla-contacto tr:last-child th,
+.tabla-contacto tr:last-child td {
+    border-bottom: none;
+}
+
+.tabla-contacto a {
+    color: var(--color3);
+    text-decoration: none;
+}
+
+.tabla-contacto a:hover {
+    text-decoration: underline;
+}
+
+.info-contacto p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Formulario */
+.formulario-contacto {
+    border: 2px dashed #44A1F2;
+    padding: 15px;
+    background-color: #fafafa;
+}
+
+.formulario-contacto .campo {
+    margin-bottom: 12px;
+}
+
+.formulario-contacto label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color1);
+    margin-bottom: 4px;
+}
+
+.formulario-contacto .requerido {
+    color: #c0392b;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-family: "Oxygen", sans-serif;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+    outline: none;
+    border-color: var(--color3);
+    box-shadow: 0 0 0 3px rgba(68, 161, 242, 0.2);
+}
+
+.formulario-contacto input:invalid:not(:placeholder-shown),
+.formulario-contacto textarea:invalid:not(:placeholder-shown) {
+    border-color: #e74c3c;
+}
+
+.formulario-contacto input:valid:not(:placeholder-shown),
+.formulario-contacto textarea:valid:not(:placeholder-shown) {
+    border-color: #27ae60;
+}
+
+.formulario-contacto textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.btn-enviar {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: var(--color1);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: 8px;
+}
+
+.btn-enviar:hover {
+    background-color: #2a3a4d;
+}
+
+.btn-enviar:active {
+    transform: scale(0.98);
+}
+
+/* Mapa */
+.mapa-contacto {
+    border: 2px dashed #44A1F2;
+    overflow: hidden;
+}
+
+.mapa-contenedor {
+    position: relative;
+    width: 100%;
+    height: 380px;
+    min-height: 300px;
+}
+
+.mapa-contenedor iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Clase para ocultar visualmente pero mantener accesible */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Menú activo */
+#menu li a.activo {
+    color: var(--color2);
+    font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .contactos-main {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .info-contacto,
+    .formulario-contacto,
+    .mapa-contacto {
+        max-width: 100%;
+    }
+    
+    .mapa-contenedor {
+        height: 300px;
+    }
+}
+
+@media (max-width: 500px) {
+    .tabla-contacto th,
+    .tabla-contacto td {
+        display: block;
+        width: 100%;
+    }
+    
+    .tabla-contacto th {
+        border-bottom: none;
+        padding-bottom: 2px;
+    }
+    
+    .tabla-contacto td {
+        padding-top: 2px;
+        margin-bottom: 8px;
+    }
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACTOS | Condor Xtreme</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="shortcut icon" href="img/condor.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Tagesschrift&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div id="contenedor" style="background-color: white;">
+        <!-- Encabezado semántico con menú horizontal y favicon ya configurado -->
+        <header>
+            <a href="https://www.condorxtreme.com/">
+                <img src="img/logo.png" alt="Logo Condor Xtreme">
+            </a>
+            <nav>
+                <ul id="menu">
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="destino.html">DESTINOS</a></li>
+                    <li><a href="contactos.html" class="activo">CONTACTOS</a></li>
+                    <li><a href="video.html">VIDEOS</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <h5><i class="fa-solid fa-address-book"></i> contactos</h5>
+
+        <main class="contactos-main">
+            <!-- Sección de información de contacto con tabla (requisito: uso de tabla) -->
+            <section class="info-contacto" aria-labelledby="titulo-info">
+                <h2 id="titulo-info" class="titulo-rojo">Información de Contacto</h2>
+                <table class="tabla-contacto">
+                    <caption>Datos de contacto de Condor Xtreme</caption>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Dirección:</th>
+                            <td>Explanada Costa Verde del Distrito de Magdalena del Mar, Lima - Perú</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Teléfonos:</th>
+                            <td>+51 947 392 102</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Email:</th>
+                            <td><a href="mailto:contact@condorxtreme.com">contact@condorxtreme.com</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 class="titulo-rojo">Horario de Atención</h3>
+                <p><strong>Área de Ventas:</strong><br>
+                de Lunes a Viernes de 8 am a 6 pm.</p>
+            </section>
+
+            <!-- Formulario con validación HTML5 (requisito: formulario con validación) -->
+            <section class="formulario-contacto" aria-labelledby="titulo-form">
+                <h2 id="titulo-form" class="titulo-rojo">Escríbenos</h2>
+                <form action="#" method="post" id="form-contacto">
+                    <div class="campo">
+                        <label for="nombre">Nombre y Apellido</label>
+                        <input type="text" id="nombre" name="nombre" 
+                               placeholder="Ingresa tu nombre completo" 
+                               required minlength="3" maxlength="80"
+                               pattern="[A-Za-zÁÉÍÓÚáéíóúÑñüÜ\s]+"
+                               title="Solo letras y espacios">
+                    </div>
+
+                    <div class="campo">
+                        <label for="celular">Celular <span class="requerido">*</span></label>
+                        <input type="tel" id="celular" name="celular" 
+                               placeholder="Ej: 947392102" 
+                               required pattern="[0-9]{9,11}"
+                               title="Ingresa un número de celular válido (9 a 11 dígitos)">
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">Correo electrónico <span class="requerido">*</span></label>
+                        <input type="email" id="email" name="email" 
+                               placeholder="tu@correo.com" 
+                               required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="ruc">RUC (Opcional)</label>
+                        <input type="text" id="ruc" name="ruc" 
+                               placeholder="11 dígitos" 
+                               pattern="[0-9]{11}"
+                               title="El RUC debe tener 11 dígitos numéricos"
+                               maxlength="11">
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" 
+                                  placeholder="Detalle tu requerimiento a continuación tal como punto de inicio y fin, tipo de unidad, # de personas a trasladar, fecha y horario del servicio."
+                                  required minlength="10"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">ENVIAR</button>
+                </form>
+            </section>
+
+            <!-- Mapa de Google (requisito: Google maps) -->
+            <section class="mapa-contacto" aria-labelledby="titulo-mapa">
+                <h2 id="titulo-mapa" class="sr-only">Ubicación en el mapa</h2>
+                <div class="mapa-contenedor">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15605.8!2d-77.075!3d-12.095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c6e6e6e6e6e6%3A0x0!2sExplanada%20Costa%20Verde%2C%20Magdalena%20del%20Mar%2C%20Lima!5e0!3m2!1ses!2spe!4v1699999999999!5m2!1ses!2spe" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mapa de ubicación de Condor Xtreme en Magdalena del Mar, Lima">
+                    </iframe>
+                </div>
+            </section>
+        </main>
+
+        <!-- Pie de página semántico -->
+        <footer>
+            <h4>© Condor Xtreme 2024 Todos los derechos reservados</h4>
+            <div>
+                <address>
+                    <ul>
+                        <li>Explanada Costa Verde del Distrito de Magdalena del Mar</li>
+                        <li>+51 947392102</li>
+                        <li>contact@condorxtreme.com</li>
+                    </ul>
+                </address>
+                <nav>
+                    <p>Redes Sociales: </p>
+                    <ul id="redes">
+                        <li><a href="https://web.facebook.com/condorXtreme?_rdc=1&_rdr#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/condor_xtreme" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://api.whatsapp.com/send/?phone=51947392102&text=Deseo+realizar+un+consulta+personalizada+sobre...+&type=phone_number&app_absent=0" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
+                        <li><a href="https://www.youtube.com/condorxtremeperu" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Validación adicional del lado del cliente y feedback visual
+        const form = document.getElementById('form-contacto');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (form.checkValidity()) {
+                alert('¡Gracias por tu mensaje! Nos pondremos en contacto pronto.');
+                form.reset();
+            } else {
+                form.reportValidity();
+            }
+        });
+    </script>
+</body>
+</html>
